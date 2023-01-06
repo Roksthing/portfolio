@@ -25,6 +25,7 @@ li{
 body{
     color: #333;
     line-height: 1;
+    min-width: 1280px;
 }
 
 /* 공통 스타일 */

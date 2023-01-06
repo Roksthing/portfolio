@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>새미네 부엌</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            color: inherit;
+        }
+        body{
+            width: 1920px;    
+            color: #333;        
+            line-height: 1;
+        }
+        /* header */
+        header{
+            height: 100px;
+            border-bottom: 1px solid #eee;
+        }
+        header .inner{
+            display: flex;
+            justify-content: space-between;
+            width: 1440px;/* width: calc(100% - 180px);계산기 수식 앞뒤로 띄어쓰기 넣어야됨 */
+            margin: 0 auto;
+            height: 100%;
+            align-items: center;
+        }
+        header .inner ul {
+            display: flex;
+            align-items: center;
+        }
+        header .inner nav ul li{
+            margin: 0 30px;/* 여백 설정해줄떈 항상 양쪽으로
+                              한쪽으로 지정하면 나중에 치우쳐짐 */
+        }
+        header .inner nav ul li a{
+            display: flex;
+            align-items: center;
+        }
+        header .inner .right_menu li a img{
+            width: 20px;
+            height: 20px;
+        }
+        header .inner .right_menu li:nth-child(1){
+            margin-right: 20px;
+        }
+        /* .main_visual */
+        .main_visual{
+            width: 1440px;
+            margin: 0 auto;/* width에서 calc를 쓸거면 margin 0 auto 쓰면 좋음 */
+        }
+        .main_visual img{
+            width: 100%;
+        }
+        /* .cont01 */
+        .cont01 .inner{
+            width: 1440px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        .cont01 .inner .list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:  space-between;
+            align-content: center;
+            width: 100%;
+        }
+        .cont01 .inner .list figure:hover img{
+            transform: scale(1.3);/* 마우스 올렸을 때 이미지만 120%확대되도록 */
+            transition: 0.9s;/* 마우스 올렸을 떄 확대에 걸리는 시간 설정 */
+        }
+        .cont01 .inner .list .item01 figure{
+            width: 351px;
+            height: 351px;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+        .cont01 .inner .list .item01 figure img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cont01 .inner .list .item01 div{
+            padding: 15px 0 0 10px;
+        }
+        .cont01 .inner .list .item01 div h4{
+            font-size: 18px;
+        }
+        .cont01 .inner .list .item01 div p{
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        .cont01 .inner .list .item01 div ul li{
+            display: inline-block;
+            font-size: 14px;
+            margin-right: 40px;
+            margin-top: 35px;
+        }
+        .cont01 .inner .list .item01 div ul li img{
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            /* 인라인 요소가 있을떄 수직정렬 
+                inline
+                display:inline
+                display:inset-block:*/
+        }
+        .cont01 .inner .list .item02 figure{
+            width: 351px;
+            height: 351px;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+        .cont01 .inner .list .item02 figure img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .cont01 .inner .list .item02 div{
+            padding: 15px 0 0 10px;
+        }
+        .cont01 .inner .list .item02 div h4{
+            font-size: 18px;
+        }
+        .cont01 .inner .list .item02 div p{
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        .cont01 .inner .list .item02 div ul li{
+            display: inline-block;
+            font-size: 14px;
+            margin-right: 40px;
+            margin-top: 35px;
+        }
+        .cont01 .inner .list .item02 div ul li img{
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            /* 인라인 요소가 있을떄 수직정렬 
+                inline
+                display:inline
+                display:inset-block:*/
+        }
+        .cont01 .inner .list .item03 figure{
+            width: 351px;
+            height: 351px;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+        .cont01 .inner .list .item03 figure img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .cont01 .inner .list .item03 div{
+            padding: 15px 0 0 10px;
+        }
+        .cont01 .inner .list .item03 div h4{
+            font-size: 18px;
+        }
+        .cont01 .inner .list .item03 div p{
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        .cont01 .inner .list .item03 div ul li{
+            display: inline-block;
+            font-size: 14px;
+            margin-right: 40px;
+            margin-top: 35px;
+        }
+        .cont01 .inner .list .item03 div ul li img{
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            /* 인라인 요소가 있을떄 수직정렬 
+                inline
+                display:inline
+                display:inset-block:*/
+        }
+        .cont01 .inner .list .item04 figure{
+            width: 351px;
+            height: 351px;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+        .cont01 .inner .list .item04 figure img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .cont01 .inner .list .item04 div{
+            padding: 15px 0 0 10px;
+        }
+        .cont01 .inner .list .item04 div h4{
+            font-size: 18px;
+        }
+        .cont01 .inner .list .item04 div p{
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        .cont01 .inner .list .item04 div ul li{
+            display: inline-block;
+            font-size: 14px;
+            margin-right: 40px;
+            margin-top: 35px;
+        }
+        .cont01 .inner .list .item04 div ul li img{
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            /* 인라인 요소가 있을떄 수직정렬 
+                inline
+                display:inline
+                display:inset-block:*/
+        }
+        .cont01 .inner .list .item05 figure{
+            width: 351px;
+            height: 351px;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+        .cont01 .inner .list .item05 figure img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .cont01 .inner .list .item05 div{
+            padding: 15px 0 0 10px;
+        }
+        .cont01 .inner .list .item05 div h4{
+            font-size: 18px;
+        }
+        .cont01 .inner .list .item05 div p{
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        .cont01 .inner .list .item05 div ul li{
+            display: inline-block;
+            font-size: 14px;
+            margin-right: 40px;
+            margin-top: 35px;
+        }
+        .cont01 .inner .list .item05 div ul li img{
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            /* 인라인 요소가 있을떄 수직정렬 
+                inline
+                display:inline
+                display:inset-block:*/
+        }
+        .cont01 .inner .list .item06 figure{
+            width: 351px;
+            height: 351px;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+        .cont01 .inner .list .item06 figure img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .cont01 .inner .list .item06 div{
+            padding: 15px 0 0 10px;
+        }
+        .cont01 .inner .list .item06 div h4{
+            font-size: 18px;
+        }
+        .cont01 .inner .list .item06 div p{
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        .cont01 .inner .list .item06 div ul li{
+            display: inline-block;
+            font-size: 14px;
+            margin-right: 40px;
+            margin-top: 35px;
+        }
+        .cont01 .inner .list .item06 div ul li img{
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            /* 인라인 요소가 있을떄 수직정렬 
+                inline
+                display:inline
+                display:inset-block:*/
+        }
+        .cont01 .inner .list .item07 figure{
+            width: 351px;
+            height: 351px;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+        .cont01 .inner .list .item07 figure img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .cont01 .inner .list .item07 div{
+            padding: 15px 0 0 10px;
+        }
+        .cont01 .inner .list .item07 div h4{
+            font-size: 18px;
+        }
+        .cont01 .inner .list .item07 div p{
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        .cont01 .inner .list .item07 div ul li{
+            display: inline-block;
+            font-size: 14px;
+            margin-right: 40px;
+            margin-top: 35px;
+        }
+        .cont01 .inner .list .item07 div ul li img{
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            /* 인라인 요소가 있을떄 수직정렬 
+                inline
+                display:inline
+                display:inset-block:*/
+        }
+        .cont01 .inner .list .item08 figure{
+            width: 351px;
+            height: 351px;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+        .cont01 .inner .list .item08 figure img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .cont01 .inner .list .item08 div{
+            padding: 15px 0 0 10px;
+        }
+        .cont01 .inner .list .item08 div h4{
+            font-size: 18px;
+        }
+        .cont01 .inner .list .item08 div p{
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        .cont01 .inner .list .item08 div ul li{
+            display: inline-block;
+            font-size: 14px;
+            margin-right: 40px;
+            margin-top: 35px;
+        }
+        .cont01 .inner .list .item08 div ul li img{
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            /* 인라인 요소가 있을떄 수직정렬 
+                inline
+                display:inline
+                display:inset-block:*/
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <h1>
+                <a href="#">
+                    <img src="/새미네 부엌/img/logo.svg">
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="#"></a>요리상담소</li>
+                    <li><a href="#"></a>요리법 연구소</li>
+                    <li><a href="#"></a>요리해요</li>
+                    <li><a href="#"></a>맛있는 추억을 그리다</li>
+                    <li><a href="#"><img src="/새미네 부엌/img/wow.svg">이벤트</a></li>
+                </ul>
+            </nav>
+            <ul class="right_menu">
+                <li><a href="#"><img src="/새미네 부엌/img/돋보기.png"></a></li>
+                <li><a href="#"><img src="/새미네 부엌/img/로그인.png"></a></li>
+            </ul><!-- right_menu -->
+        </div><!-- inner end -->
+    </header>
+    <section class="main_visual">
+        <img src="img/main_visual.jpg">
+    </section><!-- main visual end -->
+    <section class="cont01">
+        <div class="inner">
+            <h3>우리 함께 요리해볼까요?</h3>
+            <div class="list">
+                <div class="item01">
+                    <figure>
+                        <img src="img/1.jpg">
+                    </figure>
+                    <div>
+                        <h4>스트레스가 날아가는 순간!</h4>
+                        <p>짜릿! 매콤얼얼 마라탕과 마라샹궈</p>
+                        <ul>
+                            <li>
+                                <img src="img/하트.png">
+                                <span>22</span>
+                            </li>
+                            <li>
+                                <img src="img/대화.png">
+                                <span>4</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- item01 end -->
+                <div class="item02">
+                    <figure>
+                        <img src="img/2.jpg">
+                    </figure>
+                    <div>
+                        <h4>추운 겨울 생각나는 뜨끈~한 국물요리</h4>
+                        <p>바다향 가득 대구지리탕</p>
+                        <ul>
+                            <li>
+                                <img src="img/하트.png">
+                                <span>5</span>
+                            </li>
+                            <li>
+                                <img src="img/대화.png">
+                                <span>1</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- item02 end -->
+                <div class="item03">
+                    <figure>
+                        <img src="img/3.jpg">
+                    </figure>
+                    <div>
+                        <h4>김장철, 남은 배추가 있다면?</h4>
+                        <p>취향따라 2가지 수육</p>
+                        <ul>
+                            <li>
+                                <img src="img/하트.png">
+                                <span>17</span>
+                            </li>
+                            <li>
+                                <img src="img/대화.png">
+                                <span>9</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- item03 end -->
+                <div class="item04">
+                    <figure>
+                        <img src="img/4.jpg">
+                    </figure>
+                    <div>
+                        <h4>육지 채소로 건강한 집밥</h4>
+                        <p>담백하게 또는 얼큰하게! 두 가지 뭇국</p>
+                        <ul>
+                            <li>
+                                <img src="img/하트.png">
+                                <span>13</span>
+                            </li>
+                            <li>
+                                <img src="img/대화.png">
+                                <span>2</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- item04 end -->
+                <div class="item05">
+                    <figure>
+                        <img src="img/5.jpg">
+                    </figure>
+                    <div>
+                        <h4>지구를 위해 채소해요</h4>
+                        <p>달큰향긋 토마토바질전</p>
+                        <ul>
+                            <li>
+                                <img src="img/하트.png">
+                                <span>14</span>
+                            </li>
+                            <li>
+                                <img src="img/대화.png">
+                                <span>5</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- item05 end -->
+                <div class="item06">
+                    <figure>
+                        <img src="img/6.jpg">
+                    </figure>
+                    <div>
+                        <h4>손님 초대 요리는 이렇게, 집들이 음식!</h4>
+                        <p>스테이크와 사이드 누른알감자</p>
+                        <ul>
+                            <li>
+                                <img src="img/하트.png">
+                                <span>11</span>
+                            </li>
+                            <li>
+                                <img src="img/대화.png">
+                                <span>2</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- item06 end -->
+                <div class="item07">
+                    <figure>
+                        <img src="img/7.jpg">
+                    </figure>
+                    <div>
+                        <h4>배달요리 이렇게 변신!</h4>
+                        <p>돌돌말아 치킨 스낵랩</p>
+                        <ul>
+                            <li>
+                                <img src="img/하트.png">
+                                <span>15</span>
+                            </li>
+                            <li>
+                                <img src="/새미네 부엌/img/대화.png">
+                                <span>2</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- item07 end -->
+                <div class="item08">
+                    <figure>
+                        <img src="/새미네 부엌/img/8.jpg">
+                    </figure>
+                    <div>
+                        <h4>따뜻한 음식이 생각난다면?</h4>
+                        <p>따뜻구수 된장수제비</p>
+                        <ul>
+                            <li>
+                                <img src="/새미네 부엌/img/하트.png">
+                                <span>17</span>
+                            </li>
+                            <li>
+                                <img src="/새미네 부엌/img/대화.png">
+                                <span>3</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- item08 end -->
+            </div><!-- list end -->
+        </div><!-- inner end -->
+    </section><!-- cont01 end -->
+
+    
+</body>
+</html>

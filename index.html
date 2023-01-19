@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Rok</title>
+    <title>Rok's portfolio</title>
     <!-- link fancybox's CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"
         integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Link Swiper's CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
@@ -19,7 +20,7 @@
     <header>
         <div class="inner">
             <h1>
-                <a href="#">logo</a>
+                <a href="#"><img src="img/logo/Rok's_logo.png" alt=""></a>
             </h1>
             <nav>
                 <ul>
@@ -30,17 +31,21 @@
                 </ul>
             </nav>
             <ul class="right_menu">
-                <li><a href="#">유튜브 채널</a></li>
-                <li><a href="#">카카오톡 ID</a></li>
+                <li><a href="https://www.youtube.com/channel/UCHAPpkpgMmq4tvgnULcz8ww" target="_blank">유튜브 채널</a></li>
+                <li><a href="img/kakaotalk_QR.png" data-fancybox="images">카카오톡 ID</a></li>
             </ul><!-- .right_menu end -->
         </div><!-- .inner end -->
     </header>
-    <section class="main_visual">
+
+    <div class="main_visual">
         <!-- placeholder.com -->
         <img src="https://via.placeholder.com/1920x960" alt="">
-    </section><!-- main_visual end -->
+        <div>
+            <img src="img/icon/animation_500_ld2ihne6.gif" alt="">
+        </div>
+    </div><!-- main_visual end -->
     <section class="video">
-        <div class="inner">
+        <div class="inner" data-aos="fade-up" data-aos-duration="1000">
             <div class="title">
                 <h3>영상편집/모션그래픽</h3>
                 <p>프리미어프로, 에프터이펙트 등을 사용하여 영상편집/모션그래픽 진행</p>
@@ -197,7 +202,7 @@
         </div><!-- .inner end -->
     </section><!-- .video end -->
     <section class="web">
-        <div class="inner">
+        <div class="inner" data-aos="fade-up" data-aos-duration="1000">
             <div class="title">
                 <h3>웹디자인/웹퍼블리싱</h3>
                 <p>포토샵, 일러스트레이터, 비쥬얼스튜디오코드를 이용하여 웹사이트 구현</p>
@@ -208,9 +213,11 @@
                         <img src="sub/gorilla_camping_renewal/index.png" alt="">
                     </figure>
                     <div class="info">
-                        <h4>리뉴얼 사이트 이름 작성</h4>
-                        <p>제작목적, 컨셉, 웹사이트 리뉴얼을 진행하였으며,
-                            기획, 디자인, html, css언어를 활용하여 웹사이트를
+                        <h4>고릴라캠핑 웹페이지 리뉴얼</h4>
+                        <p>개선된 웹페이지로 캠핑의 종합사이트를 만들고,
+                            이를 통해 다양한 방향의 판매전략 수립을 위해
+                            유용함이라는 컨셉으로 웹사이트 리뉴얼을 진행하였으며,
+                            포토샵과 html, css언어를 활용하여 웹사이트를
                             구현하였습니다.</p>
                         <dl>
                             <dt>프로그램</dt>
@@ -221,8 +228,10 @@
                             <dd>html, css</dd>
                         </dl>
                         <ul class="btn">
+                            <li><a href="http://www.gorillacamping.net/" target="_blank">기존사이트보기</a></li>
                             <li><a href="sub/gorilla_camping_renewal/index.html" target="_blank">제작사이트보기</a></li>
-                            <li>기획서 보기</li>
+                            <li><a href="img/web_contents_proposal/gorilla_camping_renewal.html" target="_blank">기획서
+                                    보기</a></li>
                         </ul>
                     </div><!-- info end -->
                 </div><!-- item end / 1 -->
@@ -231,10 +240,11 @@
                         <img src="sub/angelinus_renewal/index.png" alt="">
                     </figure>
                     <div class="info">
-                        <h4>리뉴얼 사이트 이름 작성</h4>
-                        <p>제작목적, 컨셉, 웹사이트 리뉴얼을 진행하였으며,
-                            기획, 디자인, html, css언어를 활용하여 웹사이트를
-                            구현하였습니다.</p>
+                        <h4>엔제리너스 웹페이지 리뉴얼</h4>
+                        <p>커피숍의 웹페이지는 커피에 집중해야 될 것이라는 목적으로
+                            브랜드가 밀고 있는 컨셉인 모던함과 심플함에 초점을 잡고
+                            웹사이트 리뉴얼을 진행하였으며, 포토샵과 html, css언어를
+                            활용하여 웹사이트를 구현하였습니다.</p>
                         <dl>
                             <dt>프로그램</dt>
                             <dd>포토샵, 비주얼스튜디오코드</dd>
@@ -244,8 +254,10 @@
                             <dd>html, css</dd>
                         </dl>
                         <ul class="btn">
+                            <li><a href="https://www.angelinus.com/index.asp" target="_blank">기존사이트보기</a></li>
                             <li><a href="sub/angelinus_renewal/index.html" target="_blank">제작사이트보기</a></li>
-                            <li>기획서 보기</li>
+                            <li><a href="img/web_contents_proposal/angelinus_renewal.html" target="_blank">기획서 보기</a>
+                            </li>
                         </ul>
                     </div><!-- info end -->
                 </div><!-- item end / 2 -->
@@ -253,7 +265,7 @@
         </div><!-- inner end -->
     </section><!-- web end -->
     <section class="graphic">
-        <div class="inner">
+        <div class="inner" data-aos="fade-up" data-aos-duration="1000">
             <div class="title">
                 <h3>그래픽디자인</h3>
                 <p>2D, 3D그래픽을 포토샵, 일러스트레이터를
@@ -309,7 +321,7 @@
         </div><!-- inner end -->
     </section><!-- graphic end -->
     <section class="profile">
-        <div class="inner">
+        <div class="inner" data-aos="fade-up" data-aos-duration="1000">
             <div class="title">
                 <h3>나의 경력</h3>
                 <p>나의 경력, 이력, 스킬을 공유합니다.</p>
@@ -325,16 +337,22 @@
                     </ul>
                     <ul>
                         <li><strong>연락처</strong></li>
-                        <li>010-4785-6941</li>
+                        <li>+82 10 4785 6941</li>
                     </ul>
                     <ul>
                         <li><strong>경력, 자격증</strong></li>
-                        <li>어디서 무엇을 하였는가?<br />
-                            자격증은 무엇이 있는가?</li>
+                        <li>바텐더 경연대회 최우수상 수상<br />
+                            국가공인 조주기능사<br />
+                            국가공인 PC정비사<br />
+                            사단법인 바리스타<br />
+                            사단법인 소믈리에<br />
+                            스타벅스커피코리아 글로벌커피매스터 5회 연속 인증<br />
+                        </li>
                     </ul>
                     <ul>
                         <li><strong>교육</strong></li>
-                        <li>[멀티미디어콘텐츠제작] 영상편집&웹콘텐츠제작<br />
+                        <li>경주대학교 호텔경영학과 졸업<br />
+                            [멀티미디어콘텐츠제작] 영상편집&웹콘텐츠제작<br />
                             (프리미어,에펙,시네마4D)</li>
                     </ul>
                     <ul class="skill">
@@ -357,18 +375,29 @@
 
     <footer>
         <ul>
-            <li><a href="#">유튜브 채널</a></li>
-            <li><a href="#" download>지원서 다운로드</a></li>
+            <li><a href="https://www.youtube.com/channel/UCHAPpkpgMmq4tvgnULcz8ww" target="_blank">유튜브 채널</a></li>
+            <li><a href="../02_asset/sub/Rok's_resume.hwp" download>지원서 다운로드</a></li>
         </ul>
         <p>COPYRIGHT 2023. 디자이너 제갈은록. ALL RIGHTS RESERVED.</p>
         <p>본 사이트는 개인 포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다.<br />
             사용된 일부 이미지 및 폰트 등은 별도의 출처가 있음을 밝힙니다.</p>
     </footer>
+    <div class="sidebanner">
+        <a href="#"><img src="img/icon/double_arrows.png" alt=""></a>
+    </div>
 
 
-    <!-- cdnjs.com JS -->
+    <!-- aos js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- jquery 라이브러리 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
         integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- jquery ui 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+        integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- fancybox JS -->
@@ -379,8 +408,15 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
+
+    <!-- 스크립트 코드 작성 -->
     <script>
+        //콘텐츠 페이드업 aos
+        AOS.init();
+        //콘텐츠 페이드업 aos end
+
+
+        //슬라이드 효과
         var swiper = new Swiper(".mySwiper", {
             pagination: {
                 el: ".swiper-pagination",
@@ -391,6 +427,8 @@
                 prevEl: ".swiper-button-prev",
             },
         });
+        //슬라이드 효과 end
+
 
         //탭메뉴 클릭 이벤트
         $('.tab_menu li').click(function () {
@@ -402,6 +440,73 @@
             //내가 클릭한 li가 몇번째인지를 찾아서
             //그 순서에 따라 .list_in한테 클래스명 on을 붙여줌
         });
+        //탭 메뉴 클릭 이벤트 end
+
+        //부드러운 스크롤 효과
+        class Scrooth {
+            constructor({ element = window, strength = 10, acceleration = 1.2, deceleration = 0.975 } = {}) {
+                this.element = element;
+                this.distance = strength;
+                this.acceleration = acceleration;
+                this.deceleration = deceleration;
+                this.running = false;
+                this.element.addEventListener('wheel', this.scrollHandler.bind(this), { passive: false });
+                this.element.addEventListener('mousewheel', this.scrollHandler.bind(this), { passive: false });
+                this.scroll = this.scroll.bind(this);
+            }
+            scrollHandler(e) {
+                e.preventDefault();
+                if (!this.running) {
+                    this.top = this.element.pageYOffset || this.element.scrollTop || 0;
+                    this.running = true;
+                    this.currentDistance = e.deltaY > 0 ? 0.1 : -0.1;
+                    this.isDistanceAsc = true;
+                    this.scroll();
+                }
+                else {
+                    this.isDistanceAsc = false;
+                    this.currentDistance = e.deltaY > 0 ? this.distance : -this.distance;
+                }
+            }
+            scroll() {
+                if (this.running) {
+                    this.currentDistance *= this.isDistanceAsc === true ? this.acceleration : this.deceleration;
+                    Math.abs(this.currentDistance) < 0.1 && this.isDistanceAsc === false ? this.running = false : 1;
+                    Math.abs(this.currentDistance) >= Math.abs(this.distance) ? this.isDistanceAsc = false : 1;
+                    this.top += this.currentDistance;
+                    this.element.scrollTo(0, this.top);
+                    requestAnimationFrame(this.scroll);
+                }
+            }
+        }
+        const scroll = new Scrooth({
+            element: window,
+            strength: 20,
+            acceleration: 0.5,
+            deceleration: 0.955,
+        });
+        //부드러운 스크롤 효과 end
+
+
+        //헤더 메뉴 클릭시 해당 섹션으로 이동 효과
+        //a링크 클릭시 상단이동방지
+        $('header .inner nav a').click(function (e) {
+            e.preventDefault();
+        });
+        //header .inner .nav ul li를 클릭했을 때 
+        //해당 section으로 이동
+        $('header .inner nav ul li').click(function () {
+            //클릭을 했을 때 순번 index값 구하기
+            //section태그의 순서 + offset().top;
+            let page = $('section').eq($(this).index()).offset().top;
+            //$(window).scrollTop(page);
+            $('html, body').animate({
+                scrollTop: page
+                //이징효과 검색 
+            }, 1000, 'easeOutExpo')
+        });
+        //헤더 메뉴 클릭시 해당 섹션으로 이동 효과 end
+
     </script>
 </body>
 

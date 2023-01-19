@@ -303,7 +303,7 @@ header .inner nav ul li a{
 .cont04 .swiper-button-next, .cont04 .swiper-button-prev{
     top: 97%;
 }
-cont04 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+.cont04 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
     width: auto;
     left: 50%;
     transform: translate(-50%);

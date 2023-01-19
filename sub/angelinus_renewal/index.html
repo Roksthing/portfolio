@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>엔제리너스 리뉴얼</title>
-    <link href="css/index.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet" />
 </head>
+
 <body>
     <header class="header">
         <div class="inner">
@@ -26,19 +28,33 @@
                 </ul>
             </nav>
         </div><!-- inner end -->
-        <div class="side_banner">
-            <a href="#"><img src="img/icon/instagram_icon.png" alt="FB"></a>
-            <a href="#"><img src="img/icon/facebook_icon.png" alt="FB"></a>
-            <a href="#"><img src="img/icon/youtube_icon.png" alt="FB"></a>
-            <a href="#"><img src="img/icon/side_banner.png" alt="FB"></a>
-            <a href="#"><img src="img/icon/side_banner02(124x124).png" alt="FB"></a>
-       </div>
+
     </header>
+    <div class="sidebanner">
+        <div class="instar">
+            <a href="#"><img src="img/icon/instagram_icon.png" alt="FB"></a>
+        </div>
+        <div class="face">
+            <a href="#"><img src="img/icon/facebook_icon.png" alt="FB"></a>
+        </div>
+        <div class="youtube">
+            <a href="#"><img src="img/icon/youtube_icon.png" alt="FB"></a>
+        </div>
+        <div class="joinus01">
+            <a href="#"><img src="img/icon/side_banner.png" alt="FB"></a>
+        </div>
+        <div class="joinus02">
+            <a href="#"><img src="img/icon/side_banner02(124x124).png" alt="FB"></a>
+        </div>
+    </div>
     <section class="main_visual">
         <div class="youtube_1"><!-- 사이즈를 설정할 클래스 -->
             <div class="youtube"><!-- 비율을 설정할 클래스 -->
                 <!-- 유튜브 연결 -->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/PMOzUnJHyqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PMOzUnJHyqY"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div><!-- .youtube end -->
         </div><!-- .youtube_1 end -->
     </section>
@@ -90,7 +106,10 @@
             <div class="youtube_1"><!-- 사이즈를 설정할 클래스 -->
                 <div class="youtube"><!-- 비율을 설정할 클래스 -->
                     <!-- 유튜브 연결 -->
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Hwby8Ev4w6s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Hwby8Ev4w6s"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div><!-- .youtube end -->
             </div><!-- .youtube_1 end -->
     </section><!-- .cont03 end -->
@@ -117,7 +136,7 @@
             <div class="award">
                 <div>
                     <img src="img/icon/footer02.gif">
-                    <span>한국산업의 고객만족도 지수<br/>커피전문점 부문 1위 (10年 연속)</span>
+                    <span>한국산업의 고객만족도 지수<br />커피전문점 부문 1위 (10年 연속)</span>
                 </div>
                 <div>
                     <img src="img/icon/footer01.gif">
@@ -126,5 +145,38 @@
             </div>
         </div>
     </footer>
+    <!-- jquery 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- //스크롤 스크립트 라이브러리 -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.js"></script>
+
+
+    <script>
+        // 기본 위치(top)값
+        var floatPosition = parseInt($(".sidebanner").css('top'))
+
+        // scroll 인식
+        $(window).scroll(function () {
+
+            // 현재 스크롤 위치
+            var currentTop = $(window).scrollTop();
+            var bannerTop = currentTop + floatPosition + "px";
+
+            //이동 애니메이션
+            $(".sidebanner").stop().animate({
+                "top": bannerTop
+            }, 500);
+
+        }).scroll();
+        
+        //a링크 클릭시 상단이동방지
+        $('.sidebanner a').click(function (e) {
+            e.preventDefault();
+        });
+    </script>
 </body>
+
 </html>

@@ -25,7 +25,7 @@
                     <li><a href="#">상품소개</a></li>
                     <li class="search">
                         <input type="text" placeholder="검색어 입력">
-                        <a href="#"><img src="img/icon/icons8-더-많은-검색-60.png"></a>
+                        <a href="#"><img src="img/icon/search.png"></a>
                     </li><!-- 검색창 -->
                 </ul>
             </nav>
@@ -242,7 +242,7 @@
             <div class="swiper-pagination"></div>
         </div>
     </section><!-- cont04 end -->
-    
+
     <footer class="footer">
         <div class="inner">
             <div>
@@ -258,15 +258,23 @@
     </footer>
     <div class="sideBanner">
         <div class="join_us">
-            <a href="#"><img src="img/side_banner/가맹문의.png" alt=""></a>
+            <a href="#"><img src="img/side_banner/gamaeng.png" alt=""></a>
         </div>
         <div class="in_store">
-            <a href="#"><img src="img/side_banner/입점문의.png" alt=""></a>
+            <a href="#"><img src="img/side_banner/ipjum.png" alt=""></a>
         </div>
     </div>
+
+
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.js"></script>
+
+    <!-- jquery 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
@@ -303,17 +311,19 @@
 
         // scroll 인식
         $(window).scroll(function () {
-
             // 현재 스크롤 위치
             var currentTop = $(window).scrollTop();
             var bannerTop = currentTop + floatPosition + "px";
-
             //이동 애니메이션
             $(".sideBanner").stop().animate({
                 "top": bannerTop
             }, 500);
-
         }).scroll();
+
+        //a링크 클릭시 상단이동방지
+        $('header .inner nav a').click(function (e) {
+            e.preventDefault();
+        });
     </script>
 
 </body>
